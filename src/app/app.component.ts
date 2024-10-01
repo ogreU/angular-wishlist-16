@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WishItem } from 'src/shared/models/wishItem';
 import { EventService } from 'src/shared/services/EventService';
-import { WishService } from './wish.service';
+import { WishService } from './wish/wish.service';
 
 @Component({
   selector: 'app-root',

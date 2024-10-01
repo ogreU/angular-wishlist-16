@@ -33,7 +33,7 @@ export class WishService {
     });
 
     return this.http
-      .get('assets/wishes1.json', options)
+      .get('assets/wishes.json', options)
       .pipe(catchError(this.handleError));
   }
 

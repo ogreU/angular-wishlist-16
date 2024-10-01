@@ -19,17 +19,11 @@ export class AppComponent {
   ];
 
   listFilter: any = '0';
-  newWishText = '';
   title = 'Banana';
 
   get visibleItems(): WishItem[] {
     console.log('called');
 
     return this.items.filter(filters[this.listFilter]);
-  }
-
-  addNewWish() {
-    this.items.push(new WishItem(this.newWishText));
-    this.newWishText = '';
   }
 }

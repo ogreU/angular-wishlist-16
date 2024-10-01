@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { WishItem } from 'src/shared/models/wishItem';
+import events from 'src/shared/services/EventService';
 
 @Component({
   selector: 'wish-list-item',
@@ -16,6 +16,10 @@ export class WishListItemComponent {
     return {
       'strikeout text-muted': this.fulfilled,
     };
+  }
+
+  removeWish() {
+    events.emit('removeWish', this.wishText);
   }
 
   toggleFulfilled() {
